@@ -26,7 +26,7 @@ public class Main {
 
         //Task 5
         System.out.println("Задача 5");
-        for (int year = 1904; year <= 2096 && (year % 400 == 0 || year % 100 != 0); year +=4) {
+        for (int year = 1904; year <= 2096; year +=4) {
             System.out.println(year + " год является високосным");
         }
 
@@ -56,8 +56,8 @@ public class Main {
         int cache = 29000;
         int totalCache = 0;
         for (int i = 1; i <= 12; i ++) {
-            totalCache = totalCache + totalCache/100;
-            totalCache = totalCache + cache;
+            totalCache +=cache;
+            totalCache +=totalCache/100;
             System.out.println("Месяц " + i + ", сумма накоплений равна " + totalCache + " рублей");
         }
 
